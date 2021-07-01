@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AGEING SIGNS DETECTION</title>
+
+    <!--css-->
+    <link rel="stylesheet" href="{{url_for('static' , filename = 'css/bootstrap.css')}}">
+    <link rel="stylesheet" href="{{url_for('static' , filename = 'css/style.css')}}">
+</head>
+<body>
+
+    <!--SCROLL TOP BUTTON-->
+    <a href="#" class="scrolltop show-scroll" id="scroll-top">
+      <svg xmlns="http://www.w3.org/2000/svg" width="35" height="16" fill="currentColor" class="bi bi-caret-up scrolltop__icon" viewBox="0 0 16 16">
+        <path d="M3.204 11h9.592L8 5.519 3.204 11zm-.753-.659 4.796-5.48a1 1 0 0 1 1.506 0l4.796 5.48c.566.647.106 1.659-.753 1.659H3.204a1 1 0 0 1-.753-1.659z"/>
+      </svg>
+    </a>
+
+    <script>
+      function scrollTop(){
+      const scrollTop = document.getElementById('scroll-top')
+      if(this.scrollY >= 560) scrollTop.classList.add('show-scroll'); else scrollTop.classList.remove('show-scroll')
+      }
+      window.addEventListener('scroll', scrollTop)
+    </script>
+
+    <!--nav+header-->
+    <div class="header-background">
+        <div id="nav" class="sticky-nav">
+
+            <nav class="navbar navbar-expand-lg ">
+                <div class="container">
+                  <a class="navbar-brand" href="#"><img src="{{url_for('static' , filename = 'images/logo.png')}}" alt="" style="width: 120%;"></a>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                    <span></span>
+                    <span></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto">
+                      <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#about">About Us</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#features">Features</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#work">How it works?</a>
+                      </li>
+                      <li class="nav-item">
+                        <button class="btn btn-secondary btn-try" type="submit"><a href="#upload">Try It</a></button>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+            </nav>
+        </div>
+        <h1 class="heading">Ageing Signs Detection</h1>
+        <br>
+        <p class="para">Ageing Signs Detection is a Web Portal to
+          <br>classify and localize different signs of ageing
+          <br>such as puffy eyes, wrinkles, dark spots on the face.</p>
+        <br>
+        <ul class="btn-header">
+          <a href="#upload"><span data-hover="Try Now">Try Now</span></a>
+        </ul>
+    </div>
+
+    
+
+    <!--about us-->
+    <div class="aboutus" id="about">
+      <div class="container ">
+        <div class="row  my-5">
+          <div class="col-md-10 col-sm-12 mx-auto text-center">
+            <h3 class="head">Introducing Ageing Signs Detection</h3>
+            <div class="content">
+              <h3>Ageing Signs Detection is a face recognition solution that is able to detect the dark spots, puffy eyes, and wrinkles on the face 
+                of both genders in real time and gives a veracious report. The web page which will take an image as an input.</h3>
+              <h3>Image processing techniques is used to process the image as per requirements. The model required to work upon is
+                EfficientNet which will detect signs of ageing like puffy eyes, wrinkles, dark spots
+                on the image. Overlay of bounding boxes around detected ageing signs.</h3>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+    
+    <!--features-->
+    <div class="features" id="features">
+      <h3>Our Services</h3>
+      
+      <section id="feature">
+        <div class="container-features">
+
+          <div class="row">
+
+            <div class="col-md-4 col-sm-12">
+              <div class="project-item">
+                <a href="{{url_for('static' , filename = 'images/puffy.jpg')}}">
+                  <img src="{{url_for('static' , filename = 'images/puffy.jpg')}}" alt="" class="img-fluid">
+  
+                  <div class="project-overlay">
+                    <div class="project-info">
+                      <h1>Puffy Eyes Detection</h1>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+            <div class="col-md-4 col-sm-12">
+              <div class="project-item">
+                <a href="{{url_for('static' , filename = 'images/spots.jpg')}}">
+                  <img src="{{url_for('static' , filename = 'images/spots.jpg')}}" alt="" class="img-fluid">
+  
+                  <div class="project-overlay">
+                    <div class="project-info">
+                      <h1>Dark Spots Detection</h1>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+            <div class="col-md-4 col-sm-12">
+              <div class="project-item">
+                <a href="{{url_for('static' , filename = 'images/wrinkles.jpg')}}">
+                  <img src="{{url_for('static' , filename = 'images/wrinkles.jpg')}}" alt="" class="img-fluid">
+  
+                  <div class="project-overlay">
+                    <div class="project-info">
+                      <h1>Wrinkles Detection</h1>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    
+
+    <!--how it works-->
+    <section class="how-it-works" id="work">
+      <h3>How It Works?</h3>
+      <br>
+
+      <div class="container">
+        <div class="row ms-auto">
+
+          <div class="col-md-6 col-sm-12 ">
+            <img src="{{url_for('static' , filename = 'images/howitworks.png')}}" alt=""><!--intro image-->
+          </div>
+          <div class="col-md-6 col-sm-12">
+            
+            <ul>
+              <li class="list1">
+                <h2>Upload photo</h2>
+                <p> Browse a picture and upload it for detection. </p>  
+              </li>
+              <br>
+              <li class="list2">
+                <h2>Validate</h2>
+                <p>The image is processed for the detection of ageing signs. </p> 
+              </li>
+              <br>
+              <li class="list3">
+                <h2>Result</h2>
+                <p>Detection of Puffy Eyes, Dark Spots, Wrinkles is done.</p> 
+              </li>
+              <br>
+            </ul>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--upload-->
+    <div class="upload" id="upload">
+      <h3>Upload Your Image</h3>
+      <br>
+      <br>
+      <div class="image-upload justify-content-center">
+        <form method="POST" action="" enctype="multipart/form-data">
+          <p><input type="file" name="file" accept="image/**"></p>
+          <br>
+          <p style="padding-left: 7%;"><input class="btn btn-dark" type="submit" value="Submit"></p>
+        </form>
+      </div>
+    </div>
+
+    
+
+    
+    
+    <!--footer-->
+    <footer class="page-footer">
+      <div class="row text-center justify-content-center">
+          <div class="col-md-6 col-sm-12">
+            <br>
+            <h3 class="foot">Ageing Signs Detection</h3>
+            <hr>
+            <h6>©copyright. All rights reserved.</h6>
+          </div>
+      </div>
+    </footer>
+
+    <!--js-->
+    <script src="{{url_for('static' , filename = 'scripts/bootstrap.js')}}"></script>
+   
+    
+</body>
+</html>
